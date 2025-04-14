@@ -2,7 +2,8 @@ import express, { Request, response, Response } from "express";
 import dotenv from "dotenv";
 import sequelize from "./src/database/config";
 import cors from "cors";
-
+import taskRoute from "./src/routes/taks";
+import morgan from "morgan"
 
 const corsOptions = {
     origin: "*",
@@ -16,12 +17,13 @@ const app = express();
 const PORT = process.env.PORT;
 app.use(express.json());
 app.use(cors(corsOptions));
-
+app.use(morgan("tiny"))
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
     res.status(200).send("Hello World");
   });
+app.use("/api", taskRoute)
 
 
 //Start Server
