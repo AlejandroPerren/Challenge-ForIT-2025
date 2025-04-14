@@ -31,6 +31,7 @@ async function start() {
   try {
     await sequelize.authenticate().then(() => {
       console.log("Coneccion Establecida");
+   
       app
         .listen(PORT, () => {
           console.log("Servidor Corriendo en Puerto: http://localhost:" + PORT);
@@ -39,10 +40,9 @@ async function start() {
           throw new Error(error.message);
         });
     });
+    await sequelize.sync({ alter: true });
   } catch (error) {
     console.log("Error conectandose a la base de datos", error);
-  } finally {
-    await sequelize.close();
-  }
+  } 
 }
 start();
