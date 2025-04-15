@@ -86,7 +86,7 @@ TERMINAL 2 – INICIAR FRONTEND
    npm install
    npm run dev
 ```
-
+![alt text](image.png)
 ---
 
 ## 👨‍💻 Autor
