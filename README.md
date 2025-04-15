@@ -17,6 +17,10 @@ Desarrollar una aplicación web que permita **crear**, **leer**, **actualizar** 
 - Node.js  
 - Express  
 - TypeScript  
+- Cors
+- Dotenv
+- Sequelize
+- Morgan
 
 ### 🖥️ Frontend
 
@@ -39,7 +43,6 @@ Desarrollar una aplicación web que permita **crear**, **leer**, **actualizar** 
 - ✅ Manejo básico de errores  
 - ✅ Validación de formularios con Yup  
 - ✅ Manejo de estado con React Hooks  
-- ✅ Navegación con React Router  
 - ✅ Uso de variables de entorno para configuración  
 - ✅ Estilos modernos con TailwindCSS  
 
