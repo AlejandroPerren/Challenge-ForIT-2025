@@ -73,16 +73,19 @@ VITE_API_URL=http://localhost:8080/api
 ⚠️ IMPORTANTE: Para que todo funcione correctamente, debes abrir dos consolas o terminales diferentes, una para correr el backend y otra para el frontend.
 Si detenés y volvés a iniciar solo el frontend sin reiniciar el backend, puede que la app no funcione correctamente.
 
-### 3. Iniciar el Backend
-cd backend
-npm install
-npm run dev
+----------------------------------------
+TERMINAL 1 – INICIAR BACKEND
 
-### 4. Iniciar el Frontend
-cd frontend
-npm install
-npm run dev
+   cd backend
+   npm install
+   npm run dev
 
+----------------------------------------
+TERMINAL 2 – INICIAR FRONTEND
+
+   cd frontend
+   npm install
+   npm run dev
 ---
 
 ## 👨‍💻 Autor
