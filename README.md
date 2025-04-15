@@ -33,27 +33,23 @@ Desarrollar una aplicación web que permita **crear**, **leer**, **actualizar** 
 
 ---
 
-## 📦 Funcionalidades Implementadas
+📖 ENDPOINTS DEL BACKEND
 
-- ✅ **GET /api/tasks**: Obtener todas las tareas  
-- ✅ **POST /api/tasks**: Crear una nueva tarea  
-- ✅ **PUT /api/tasks/:id**: Actualizar una tarea existente  
-- ✅ **DELETE /api/tasks/:id**: Eliminar una tarea  
-- ✅ Almacenamiento con SQLite  
-- ✅ Manejo básico de errores  
-- ✅ Validación de formularios con Yup  
-- ✅ Manejo de estado con React Hooks  
-- ✅ Uso de variables de entorno para configuración  
-- ✅ Estilos modernos con TailwindCSS  
+FUNCIONALIDADES PRINCIPALES
+---------------------------------------------------------
+| MÉTODO   | ENDPOINT                | DESCRIPCIÓN                  |
+|----------|-------------------------|------------------------------|
+| GET      | /api/tasks              | Obtener todas las tareas     |
+| POST     | /api/tasks              | Crear una nueva tarea        |
+| PUT      | /api/tasks/:id          | Actualizar una tarea         |
+| DELETE   | /api/tasks/:id          | Eliminar una tarea           |
+---------------------------------------------------------
 
----
-
-## 💡 Bonus Implementados
-
-- ✅ Uso de TypeScript en todo el proyecto (frontend y backend)  
-- ✅ Validación de formularios con Yup  
-- ✅ Notificaciones de interacción  
-- ✅ Diseño responsive y componentes reutilizables con TailwindCSS  
+EXTRAS IMPLEMENTADOS
+- Almacenamiento con SQLite
+- Manejo básico de errores
+- Validación de formularios con Yup
+- Uso de variables de entorno para configuración
 
 ---
 
@@ -78,17 +74,19 @@ Si detenés y volvés a iniciar solo el frontend sin reiniciar el backend, puede
 
 ----------------------------------------
 TERMINAL 1 – INICIAR BACKEND
-
+```bash
    cd backend
    npm install
    npm run dev
-
+```
 ----------------------------------------
 TERMINAL 2 – INICIAR FRONTEND
-
+```bash
    cd frontend
    npm install
    npm run dev
+```
+
 ---
 
 ## 👨‍💻 Autor
