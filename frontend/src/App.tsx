@@ -4,6 +4,8 @@ import TaskCard from "./components/TaskCard";
 import TaskForm from "./components/TaskForm";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [selectedTask, setSelectedTask] = useState<ITask | null>(null);
@@ -11,9 +13,7 @@ const App: React.FC = () => {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get<IFunctionResponse<ITask[]>>(
-        "http://localhost:8080/api/task"
-      );
+      const res = await axios.get<IFunctionResponse<ITask[]>>(`${API_URL}/task`);
       const result = res.data;
       if (result.status === 200 && result.data) setTasks(result.data);
       else setError(result.message);
@@ -27,8 +27,8 @@ const App: React.FC = () => {
     try {
       const method = data.id ? "put" : "post";
       const url = data.id
-        ? `http://localhost:8080/api/task/${data.id}`
-        : `http://localhost:8080/api/task`;
+        ? `${API_URL}/task/${data.id}`
+        : `${API_URL}/task`;
 
       const res = await axios({
         method,
@@ -58,7 +58,7 @@ const App: React.FC = () => {
 
     try {
       const res = await axios.delete<IFunctionResponse<null>>(
-        `http://localhost:8080/api/task/${id}`
+        `${API_URL}/task/${id}`
       );
       if (res.data.status === 200) fetchTasks();
       else alert(res.data.message);
@@ -72,7 +72,7 @@ const App: React.FC = () => {
     if (!id) return;
     try {
       const res = await axios.get<IFunctionResponse<ITask>>(
-        `http://localhost:8080/api/task/${id}`
+        `${API_URL}/task/${id}`
       );
       const result = res.data;
       if (result.status === 200 && result.data) {

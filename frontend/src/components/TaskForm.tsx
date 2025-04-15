@@ -6,6 +6,7 @@ import { InferType } from "yup";
 import { ITask } from "../types";
 import Toast from "../utils/Toast";
 
+
 const schema = yup.object({
   title: yup.string().required("El título es obligatorio"),
   description: yup.string().required("La descripción es obligatoria"),
